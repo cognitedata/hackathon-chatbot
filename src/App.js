@@ -1,8 +1,22 @@
 import React from 'react';
 import './App.css';
+import CogniteLogo from './cognite.svg';
 import ChatBot, { Loading } from 'react-simple-chatbot';
 import { message } from 'antd';
 import 'antd/dist/antd.css';
+import { ThemeProvider } from 'styled-components';
+
+const theme = {
+	background: '#fff',
+	fontFamily: 'Helvetica Neue',
+	headerBgColor: '#4A67FB',
+	headerFontColor: '#fff',
+	headerFontSize: '15px',
+	botBubbleColor: '#4A67FB',
+	botFontColor: '#fff',
+	userBubbleColor: '#fff',
+	userFontColor: '#4a4a4a',
+};
 
 class App extends React.Component {
 	state = {
@@ -32,7 +46,15 @@ class App extends React.Component {
 	render() {
 		return (
 			<div className="App">
-				<ChatBot recognitionEnable={true} steps={this.state.steps} />
+				<ThemeProvider theme={theme}>
+					<ChatBot
+						botAvatar={CogniteLogo}
+						floating={true}
+						recognitionEnable={true}
+						steps={this.state.steps}
+						headerTitle="Cognite Chatbot"
+					/>
+				</ThemeProvider>
 			</div>
 		);
 	}
