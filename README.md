@@ -69,11 +69,14 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 ## Install chatbot
 
-The chatbot is implemented using RASA platform
+The chatbot is implemented using RASA framework under Apache license, See the original licence
+
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](rasa_chatbot/cognite/ORIGINAL_RASA_LICENSE.txt)
 
 ### Requirments
 
 Pipenv
+
 Python 3.6
 
 ### Install rasa
