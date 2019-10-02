@@ -66,3 +66,29 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+## Install chatbot
+
+The chatbot is implemented using RASA platform
+
+### Requirments
+
+Pipenv
+Python 3.6
+
+### Install rasa
+
+cd rasa_chatbot
+pipenv install
+pipenv shell
+pip install rasa-x --extra-index-url https://pypi.rasa.com/simple
+
+### Run chatbot
+
+cd cognite
+rasa shell
+
+### Train a new chatbot
+
+rasa train nlu
+rasa train
