@@ -2,9 +2,9 @@ language: node_js
 env:
   - NODE_OPTIONS=--max_old_space_size=4096
 node_js:
-  - "10"
+  - '10'
 sudo: false
 install:
   - yarn
 script:
-  - yarn build
+  - yarn build || travis_terminate 1
