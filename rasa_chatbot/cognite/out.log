@@ -1,0 +1,346 @@
+2019-10-02 13:51:27,811 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-10-02 13:51:29,130 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/app.py", line 958, in handle_request
+    request, response
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/spf/framework.py", line 579, in _run_response_middleware
+    _response = await _response
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/extension.py", line 267, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 254, in set_cors_headers
+    headers_to_set = get_cors_headers(options, req.headers, req.method)
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 174, in get_cors_headers
+    origins_to_set = get_cors_origins(options, request_headers.get('Origin'))
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 149, in get_cors_origins
+    return sorted([o for o in origins if not probably_regex(o)])
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 149, in <listcomp>
+    return sorted([o for o in origins if not probably_regex(o)])
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 273, in probably_regex
+    return any((c in maybe_regex for c in common_regex_chars))
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 273, in <genexpr>
+    return any((c in maybe_regex for c in common_regex_chars))
+TypeError: argument of type 'NoneType' is not iterable
+2019-10-02 13:51:30,182 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/app.py", line 958, in handle_request
+    request, response
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/spf/framework.py", line 579, in _run_response_middleware
+    _response = await _response
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/extension.py", line 267, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 254, in set_cors_headers
+    headers_to_set = get_cors_headers(options, req.headers, req.method)
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 174, in get_cors_headers
+    origins_to_set = get_cors_origins(options, request_headers.get('Origin'))
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 149, in get_cors_origins
+    return sorted([o for o in origins if not probably_regex(o)])
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 149, in <listcomp>
+    return sorted([o for o in origins if not probably_regex(o)])
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 273, in probably_regex
+    return any((c in maybe_regex for c in common_regex_chars))
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 273, in <genexpr>
+    return any((c in maybe_regex for c in common_regex_chars))
+TypeError: argument of type 'NoneType' is not iterable
+2019-10-02 13:52:59,014 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/conversations'
+Traceback (most recent call last):
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /conversations not found
+2019-10-02 13:52:59,015 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/app.py", line 958, in handle_request
+    request, response
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/spf/framework.py", line 579, in _run_response_middleware
+    _response = await _response
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/extension.py", line 267, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 254, in set_cors_headers
+    headers_to_set = get_cors_headers(options, req.headers, req.method)
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 174, in get_cors_headers
+    origins_to_set = get_cors_origins(options, request_headers.get('Origin'))
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 149, in get_cors_origins
+    return sorted([o for o in origins if not probably_regex(o)])
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 149, in <listcomp>
+    return sorted([o for o in origins if not probably_regex(o)])
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 273, in probably_regex
+    return any((c in maybe_regex for c in common_regex_chars))
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 273, in <genexpr>
+    return any((c in maybe_regex for c in common_regex_chars))
+TypeError: argument of type 'NoneType' is not iterable
+2019-10-02 13:53:00,466 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/conversation'
+Traceback (most recent call last):
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /conversation not found
+2019-10-02 13:53:00,466 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/app.py", line 958, in handle_request
+    request, response
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/spf/framework.py", line 579, in _run_response_middleware
+    _response = await _response
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/extension.py", line 267, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 254, in set_cors_headers
+    headers_to_set = get_cors_headers(options, req.headers, req.method)
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 174, in get_cors_headers
+    origins_to_set = get_cors_origins(options, request_headers.get('Origin'))
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 149, in get_cors_origins
+    return sorted([o for o in origins if not probably_regex(o)])
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 149, in <listcomp>
+    return sorted([o for o in origins if not probably_regex(o)])
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 273, in probably_regex
+    return any((c in maybe_regex for c in common_regex_chars))
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 273, in <genexpr>
+    return any((c in maybe_regex for c in common_regex_chars))
+TypeError: argument of type 'NoneType' is not iterable
+2019-10-02 13:53:07,765 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/conversations'
+Traceback (most recent call last):
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /conversations not found
+2019-10-02 13:53:07,765 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/app.py", line 958, in handle_request
+    request, response
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/spf/framework.py", line 579, in _run_response_middleware
+    _response = await _response
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/extension.py", line 267, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 254, in set_cors_headers
+    headers_to_set = get_cors_headers(options, req.headers, req.method)
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 174, in get_cors_headers
+    origins_to_set = get_cors_origins(options, request_headers.get('Origin'))
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 149, in get_cors_origins
+    return sorted([o for o in origins if not probably_regex(o)])
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 149, in <listcomp>
+    return sorted([o for o in origins if not probably_regex(o)])
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 273, in probably_regex
+    return any((c in maybe_regex for c in common_regex_chars))
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 273, in <genexpr>
+    return any((c in maybe_regex for c in common_regex_chars))
+TypeError: argument of type 'NoneType' is not iterable
+2019-10-02 13:53:59,756 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/app.py", line 958, in handle_request
+    request, response
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/spf/framework.py", line 579, in _run_response_middleware
+    _response = await _response
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/extension.py", line 267, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 254, in set_cors_headers
+    headers_to_set = get_cors_headers(options, req.headers, req.method)
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 174, in get_cors_headers
+    origins_to_set = get_cors_origins(options, request_headers.get('Origin'))
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 149, in get_cors_origins
+    return sorted([o for o in origins if not probably_regex(o)])
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 149, in <listcomp>
+    return sorted([o for o in origins if not probably_regex(o)])
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 273, in probably_regex
+    return any((c in maybe_regex for c in common_regex_chars))
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 273, in <genexpr>
+    return any((c in maybe_regex for c in common_regex_chars))
+TypeError: argument of type 'NoneType' is not iterable
+2019-10-02 13:59:27,455 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/conversations/default'
+Traceback (most recent call last):
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /conversations/default not found
+2019-10-02 13:59:27,456 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/app.py", line 958, in handle_request
+    request, response
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/spf/framework.py", line 579, in _run_response_middleware
+    _response = await _response
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/extension.py", line 267, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 254, in set_cors_headers
+    headers_to_set = get_cors_headers(options, req.headers, req.method)
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 174, in get_cors_headers
+    origins_to_set = get_cors_origins(options, request_headers.get('Origin'))
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 149, in get_cors_origins
+    return sorted([o for o in origins if not probably_regex(o)])
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 149, in <listcomp>
+    return sorted([o for o in origins if not probably_regex(o)])
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 273, in probably_regex
+    return any((c in maybe_regex for c in common_regex_chars))
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 273, in <genexpr>
+    return any((c in maybe_regex for c in common_regex_chars))
+TypeError: argument of type 'NoneType' is not iterable
+2019-10-02 14:00:38,902 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/conversations/health'
+Traceback (most recent call last):
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /conversations/health not found
+2019-10-02 14:00:38,903 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/app.py", line 958, in handle_request
+    request, response
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/spf/framework.py", line 579, in _run_response_middleware
+    _response = await _response
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/extension.py", line 267, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 254, in set_cors_headers
+    headers_to_set = get_cors_headers(options, req.headers, req.method)
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 174, in get_cors_headers
+    origins_to_set = get_cors_origins(options, request_headers.get('Origin'))
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 149, in get_cors_origins
+    return sorted([o for o in origins if not probably_regex(o)])
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 149, in <listcomp>
+    return sorted([o for o in origins if not probably_regex(o)])
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 273, in probably_regex
+    return any((c in maybe_regex for c in common_regex_chars))
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 273, in <genexpr>
+    return any((c in maybe_regex for c in common_regex_chars))
+TypeError: argument of type 'NoneType' is not iterable
+2019-10-02 14:00:45,658 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/health'
+Traceback (most recent call last):
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /health not found
+2019-10-02 14:00:45,658 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/app.py", line 958, in handle_request
+    request, response
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/spf/framework.py", line 579, in _run_response_middleware
+    _response = await _response
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/extension.py", line 267, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 254, in set_cors_headers
+    headers_to_set = get_cors_headers(options, req.headers, req.method)
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 174, in get_cors_headers
+    origins_to_set = get_cors_origins(options, request_headers.get('Origin'))
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 149, in get_cors_origins
+    return sorted([o for o in origins if not probably_regex(o)])
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 149, in <listcomp>
+    return sorted([o for o in origins if not probably_regex(o)])
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 273, in probably_regex
+    return any((c in maybe_regex for c in common_regex_chars))
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 273, in <genexpr>
+    return any((c in maybe_regex for c in common_regex_chars))
+TypeError: argument of type 'NoneType' is not iterable
+2019-10-02 14:00:50,674 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/app.py", line 958, in handle_request
+    request, response
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/spf/framework.py", line 579, in _run_response_middleware
+    _response = await _response
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/extension.py", line 267, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 254, in set_cors_headers
+    headers_to_set = get_cors_headers(options, req.headers, req.method)
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 174, in get_cors_headers
+    origins_to_set = get_cors_origins(options, request_headers.get('Origin'))
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 149, in get_cors_origins
+    return sorted([o for o in origins if not probably_regex(o)])
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 149, in <listcomp>
+    return sorted([o for o in origins if not probably_regex(o)])
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 273, in probably_regex
+    return any((c in maybe_regex for c in common_regex_chars))
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 273, in <genexpr>
+    return any((c in maybe_regex for c in common_regex_chars))
+TypeError: argument of type 'NoneType' is not iterable
+2019-10-02 14:01:06,445 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/messages/303665926261821650'
+Traceback (most recent call last):
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /messages/303665926261821650 not found
+2019-10-02 14:01:06,446 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/app.py", line 958, in handle_request
+    request, response
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/spf/framework.py", line 579, in _run_response_middleware
+    _response = await _response
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/extension.py", line 267, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 254, in set_cors_headers
+    headers_to_set = get_cors_headers(options, req.headers, req.method)
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 174, in get_cors_headers
+    origins_to_set = get_cors_origins(options, request_headers.get('Origin'))
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 149, in get_cors_origins
+    return sorted([o for o in origins if not probably_regex(o)])
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 149, in <listcomp>
+    return sorted([o for o in origins if not probably_regex(o)])
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 273, in probably_regex
+    return any((c in maybe_regex for c in common_regex_chars))
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 273, in <genexpr>
+    return any((c in maybe_regex for c in common_regex_chars))
+TypeError: argument of type 'NoneType' is not iterable
+2019-10-02 14:01:07,143 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/messages/303665926261821650'
+Traceback (most recent call last):
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /messages/303665926261821650 not found
+2019-10-02 14:01:07,143 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/app.py", line 958, in handle_request
+    request, response
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/spf/framework.py", line 579, in _run_response_middleware
+    _response = await _response
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/extension.py", line 267, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 254, in set_cors_headers
+    headers_to_set = get_cors_headers(options, req.headers, req.method)
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 174, in get_cors_headers
+    origins_to_set = get_cors_origins(options, request_headers.get('Origin'))
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 149, in get_cors_origins
+    return sorted([o for o in origins if not probably_regex(o)])
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 149, in <listcomp>
+    return sorted([o for o in origins if not probably_regex(o)])
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 273, in probably_regex
+    return any((c in maybe_regex for c in common_regex_chars))
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 273, in <genexpr>
+    return any((c in maybe_regex for c in common_regex_chars))
+TypeError: argument of type 'NoneType' is not iterable
+2019-10-02 14:01:37,078 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic/app.py", line 958, in handle_request
+    request, response
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/spf/framework.py", line 579, in _run_response_middleware
+    _response = await _response
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/extension.py", line 267, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 254, in set_cors_headers
+    headers_to_set = get_cors_headers(options, req.headers, req.method)
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 174, in get_cors_headers
+    origins_to_set = get_cors_origins(options, request_headers.get('Origin'))
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 149, in get_cors_origins
+    return sorted([o for o in origins if not probably_regex(o)])
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 149, in <listcomp>
+    return sorted([o for o in origins if not probably_regex(o)])
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 273, in probably_regex
+    return any((c in maybe_regex for c in common_regex_chars))
+  File "/Users/davidliu/.local/share/virtualenvs/rasa_chatbot-bCCuYmAT/lib/python3.6/site-packages/sanic_cors/core.py", line 273, in <genexpr>
+    return any((c in maybe_regex for c in common_regex_chars))
+TypeError: argument of type 'NoneType' is not iterable

@@ -94,6 +94,19 @@ $ pip install rasa-x --extra-index-url https://pypi.rasa.com/simple
 cd cognite
 rasa shell
 ```
+### Run chatbot as backend
+
+```bash
+cd cognite
+rasa x
+```
+now `localhost:5005/webhooks/rest/webhook` can be POST to like this:
+```
+curl -X POST \
+  http://localhost:5005/webhooks/rest/webhook \
+  -H 'Content-Type: application/json' \
+  -d '{"sender":"Me","message":"hello"}'
+```
 
 ### Train a new chatbot
 
