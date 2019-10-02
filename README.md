@@ -79,16 +79,21 @@ Python 3.6
 ### Install rasa
 
 cd rasa_chatbot
+
 pipenv install
+
 pipenv shell
+
 pip install rasa-x --extra-index-url https://pypi.rasa.com/simple
 
 ### Run chatbot
 
 cd cognite
+
 rasa shell
 
 ### Train a new chatbot
 
 rasa train nlu
+
 rasa train
