@@ -71,7 +71,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 The chatbot is implemented using RASA framework under Apache license, See the original licence
 
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](rasa_chatbot/cognite/ORIGINAL_RASA_LICENSE.txt)
+[![license](Apache license)](rasa_chatbot/cognite/ORIGINAL_RASA_LICENSE.txt)
 
 ### Requirments
 
