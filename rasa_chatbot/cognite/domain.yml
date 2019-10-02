@@ -1,0 +1,38 @@
+intents:
+  - greet
+  - bot_challenge
+  - thankyou
+  - search_asset
+  - search_document
+  - navigate_page
+
+actions:
+  - utter_greet
+  - utter_noworries
+  - utter_iamabot
+  - utter_search_asset
+  - utter_search_document
+  - utter_navigate_page
+
+templates:
+  utter_greet:
+  - text: "Hello! I am chatbot assistant! I can help you to implement the following tasks:\n
+            - search an asset\n
+            - search an document\n
+            - navigate to a page"
+
+  utter_noworries:
+  - text: "you are welcome :)"
+  - text: "my pleasure :)"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Cognite."
+
+  utter_search_asset:
+  - text: "Here is the data of the asset."
+
+  utter_search_document:
+    - text: "Here is the document."
+
+  utter_navigate_page:
+    - text: "Here is the link to the page."
