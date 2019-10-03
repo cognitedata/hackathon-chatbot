@@ -88,6 +88,15 @@ class ChatBotMessage extends React.Component {
 					message: input,
 				}),
 			});
+			if (input.toLowerCase().indexOf('hello') > -1) {
+				await fetch('http://localhost:5005/webhooks/rest/webhook', {
+					method: 'POST',
+					body: JSON.stringify({
+						sender: 'Me',
+						message: '/restart',
+					}),
+				});
+			}
 			if (response.ok) {
 				const data = await response.json();
 				console.log(data);
