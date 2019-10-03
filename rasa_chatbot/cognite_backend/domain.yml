@@ -1,29 +1,66 @@
 intents:
+- request_assert:
+    use_entities: []
+- request_document:
+    use_entities: []
+- inform_asset
+- inform_document
+- affirm
+- deny
+- stop
+- thankyou
 - greet
 - bot_challenge
-- thankyou
-- search_asset
-- search_document
-- navigate_page
+- goodbye
+entities:
+- assetid
+- documentid
+slots:
+  assetid:
+    type: unfeaturized
+    auto_fill: false
+  documentid:
+    type: unfeaturized
+    auto_fill: false
+  requested_slot:
+    type: unfeaturized
 templates:
-  utter_greet:
-  - text: "Hello! I am chatbot assistant! I can help you to implement the following\
-      \ tasks:\n - search an asset\n - search an document\n - navigate to a page"
+  utter_ask_assetid:
+  - text: could you tell me asset id?
+  utter_ask_documentid:
+  - text: could you tell me document id?
+  utter_submit:
+  - text: All done!
+  utter_slots_assetid:
+  - text: "Here is the link to asset data:\n {assetid}"
+  utter_slots_documentid:
+  - text: "Here is the link to document:\n {documentid}"
   utter_noworries:
   - text: you are welcome :)
   - text: my pleasure :)
+  utter_ask_continue:
+  - text: do you want to continue?
+  utter_default:
+  - text: sorry, I didn't understand you, please try input something else
+  utter_greet:
+  - text: "Hello! I am chatbot assistant! I can help you to implement the following\
+      \ tasks:\n - search an asset\n - search a document"
   utter_iamabot:
   - text: I am a bot, powered by Cognite.
-  utter_search_asset:
-  - text: Here is the data of the asset.
-  utter_search_document:
-  - text: Here is the document.
-  utter_navigate_page:
-  - text: Here is the link to the page.
+  utter_goodbye:
+  - text: Bye
 actions:
-- utter_greet
+- utter_slots_assetid
+- utter_slots_documentid
 - utter_noworries
+- utter_ask_continue
+- utter_greet
 - utter_iamabot
-- utter_search_asset
-- utter_search_document
-- utter_navigate_page
+- utter_goodbye
+- utter_ask_documentid
+- utter_default
+- utter_ask_assetid
+- utter_submit
+forms:
+- asset_form
+- document_form

@@ -6,6 +6,21 @@ import { message } from 'antd';
 import 'antd/dist/antd.css';
 import { ThemeProvider } from 'styled-components';
 
+String.prototype.linkify = function() {
+	// http://, https://, ftp://
+	var urlPattern = /\b(?:https?|ftp):\/\/[a-z0-9-+&@#\/%?=~_|!:,.;]*[a-z0-9-+&@#\/%=~_|]/gim;
+
+	// www. sans http:// or https://
+	var pseudoUrlPattern = /(^|[^\/])(www\.[\S]+(\b|$))/gim;
+
+	// Email addresses
+	var emailAddressPattern = /[\w.]+@[a-zA-Z_-]+?(?:\.[a-zA-Z]{2,6})+/gim;
+
+	return this.replace(urlPattern, '<a _target="_blank" href="$&">$&</a>')
+		.replace(pseudoUrlPattern, '$1<a _target="_blank" href="http://$2">$2</a>')
+		.replace(emailAddressPattern, '<a _target="_blank" href="mailto:$&">$&</a>');
+};
+
 const theme = {
 	background: '#fff',
 	fontFamily: 'Helvetica Neue',
@@ -49,7 +64,6 @@ class App extends React.Component {
 				<ThemeProvider theme={theme}>
 					<ChatBot
 						botAvatar={CogniteLogo}
-						floating={true}
 						recognitionEnable={true}
 						steps={this.state.steps}
 						headerTitle="Cognite Chatbot"
@@ -75,9 +89,17 @@ class ChatBotMessage extends React.Component {
 				}),
 			});
 			if (response.ok) {
-				const [ data ] = await response.json();
+				const data = await response.json();
 				console.log(data);
-				this.setState({ message: data.text });
+				this.setState({
+					message: (
+						<p
+							dangerouslySetInnerHTML={{
+								__html: data.reduce((prev, el) => `${prev}\n${el.text}`, '').linkify().replace(/\n/g, '<br />'),
+							}}
+						/>
+					),
+				});
 				this.props.triggerNextStep();
 				return;
 			} else {
@@ -126,7 +148,7 @@ class InitialMessage extends React.Component {
 
 	render() {
 		const { message } = this.state;
-		return <span>{message || <Loading />}</span>;
+		return message ? <span dangerouslySetInnerHTML={{ __html: message.replace(/\n/g, '<br />') }} /> : <Loading />;
 	}
 }
 

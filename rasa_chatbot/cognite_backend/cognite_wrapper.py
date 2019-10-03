@@ -26,6 +26,13 @@ def get_documents_of_asset(asset_id: int):
     return files
 
 
+def get_document(file_name: int):
+    global sdk
+    file = sdk.files.list(name=file_name)
+    print(file)
+    return file[0]
+
+
 def get_pdf_of_asset(asset_id: int):
     global sdk
     pdfs = sdk.files.list(asset_ids=[asset_id], mime_type='application/pdf')
